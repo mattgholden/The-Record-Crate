@@ -11,7 +11,11 @@ mongoURI = 'mongodb://localhost:27017/crate'
 const PORT = 8008
 
 //INDEX
-app.get('/records', (req, res) => {
+app.get('/', (req, res) => {
+    res.send('Spin the Turntable')
+})
+
+app.get('/records', (req,res) => {
     res.render('index.ejs', {Record})
 })
 
