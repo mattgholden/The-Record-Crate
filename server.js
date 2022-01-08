@@ -10,13 +10,31 @@ mongoURI = 'mongodb://localhost:27017/crate'
 //CONFIG 
 const PORT = 8008
 
+//ROUTES
 //INDEX
-app.get('/', (req, res) => {
+app.get('/records', (req, res) => {
     res.send('Spin the Turntable')
 })
 
-app.get('/records', (req,res) => {
-    res.render('index.ejs', {Record})
+//NEW
+app.get('/records/new', (req,res) => {
+    res.render('new')
+})
+
+
+
+//FIND
+// app.find({})
+
+//DELETE
+// app.findByIdAndRemove()
+
+//UPDATE
+// app.findByIdandUpdate()
+
+//SHOW
+app.get('/records/:indexOfRecordsArray', (req, res) => {
+    res.render('show', {record: [req.params.indexOfRecordsArray]})
 })
 
 //LISTEN
