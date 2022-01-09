@@ -6,12 +6,12 @@
     <label for="artist">Artist</label>
     <input type="text" name="artist" id="artist" value="<%= record.artist%>"/>
 
-    <label for="tracklist">Tracklist</label>
-    <input type="text" name="tracklist" value="<%= record.tracklist%>"/>
+    <label for="numberOfSongs">Number of Songs</label>
+    <input type="text" name="numberOfSongs" value="<%= record.numberOfSongs%>"/>
 
-    <label for="mintCondition">Mint Condition</label>
-    <input type="checkbox" name="MintCondition" id="mintCondition" 
-    <% if (record.mintContion === true) { %>
+    <label for="readyToListen">Ready To Listen</label>
+    <input type="checkbox" name="Ready To Listen" id="readyToListen" 
+    <% if (record.readyToListen === true) { %>
     <% } %> />
 
     <input type="submit" value="Edit the Record">

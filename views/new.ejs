@@ -1,4 +1,4 @@
-<h1>Make a new record</h1>
+<h1>Add a new record to your crate</h1>
 <form action="/records" method="POST">
     <label for="title">Title</label>
     <input type="text" name="title" id="title"/>
@@ -6,11 +6,14 @@
     <label for="artist">Artist</label>
     <input type="text" name="artist" id="artist"/>
 
-    <label for="tracklist">Tracklist</label>
-    <input type="text" name="tracklist" >
+    <label for="genre">Genre</label>
+    <input type="genre" name="genre" id="genre"/>
+    
+    <label for="numberOfSongs">Number of Songs</label>
+    <input type="text" name="numberOfSongs" >
 
-    <label for="mintCondition">Mint Condition?</label>
-    <input type="checkbox" name="MintCondition" id="mintCondition">
+    <label for="readyToListen">Ready To Listen?</label>
+    <input type="checkbox" name="ReadyToListen" id="readyToListen">
     <input type="submit" value="Create Record">
 
 </form>

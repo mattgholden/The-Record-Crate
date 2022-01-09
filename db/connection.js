@@ -1,13 +1,21 @@
-const Record = require("../models/records");
+const mongoose = require('mongoose');
 
-mongoose.connect(MONGODB_URI, {
+const mongoURI = 'mongodb://localhost:27017/records'
+
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}, () => console.log('connection to MongoDB is established'))
+})
+.then(instance => {
+    console.log(`Connected to the db: ${instance.connections[0].name}`)
+})
+.catch(err => console.log(`Connection failed`, err))
 
-db.on("error", err => console.log(err.message + " is MongoDB not running?"));
-db.on("connected", () => console.log ("MongoDB connected on: ", mongoURI));
-db.on("disconnected", () => console.log ("MongoDB disconnected"));
+module.exports = mongoose
+
+// db.on("error", err => console.log(err.message + " is MongoDB not running?"));
+// db.on("connected", () => console.log ("MongoDB connected on: ", mongoURI));
+// db.on("disconnected", () => console.log ("MongoDB disconnected"));
 
 // const manyRecords = {
 //     title: "Tron: Legacy",

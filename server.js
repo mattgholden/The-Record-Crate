@@ -3,9 +3,9 @@ const express = require('express')
 const app = express()
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
-const recordsController = ('./contollers/records')
-const mongoose = require ('mongoose')
-const db = mongoose.connection
+const recordsController = require('./controllers/records')
+// const mongoose = require ('mongoose')
+// const db = mongoose.connection
 //CONFIG 
 const PORT = 8008
 
@@ -27,7 +27,7 @@ app.set('view engine', 'ejs')
 
 app.use('/records', recordsController)
 
-mongoURI = 'mongodb://localhost:27017/crate'
+// mongoURI = 'mongodb://localhost:27017/crate'
 
 
 //LISTEN

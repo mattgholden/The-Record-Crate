@@ -1,10 +1,13 @@
 const express = require ('express')
 const router = express.Router()
+const Record = require('../models/records')
 
 //ROUTES
 //INDEX
 router.get('/', (req, res) => {
+    Record.find({}, (err, records) => {
     res.render('index.ejs', {records})
+    })
 })
 
 //NEW
@@ -13,21 +16,22 @@ router.get('/new', (req,res) => {
 })
 
 //SHOW
-router.get('/:indexOfRecordsArray', (req, res) => {
-    res.render('show', {record: [req.params.indexOfRecordsArray]})
+router.get('/:id', (req, res) => {
+    Record.findById(req.params.id, (err, record) => {
+        res.render('show', {record})
+    })  
 })
 
 //CREATE
 router.post('/', (req, res) => {
-    // console.log('Create route accessed!')
-    console.log('Req.body is', req.body)
-    if(req.body.mintCondition === 'on'){
-        req.body.mintCondition = true
+    if(req.body.readyToListen === 'on'){
+        req.body.readyToListen = true
     } else {
-       req.body.mintCondition = false 
+       req.body.readyToListen = false 
     }
-    records.push(req.body)
-    res.redirect('/records')
+    Record.create(req.body, (err, createdRecord) => {
+        res.redirect('/records')
+    })
 })
 
 //DELETE
@@ -38,10 +42,10 @@ router.delete('/:index', (req,res) => {
 
 //UPDATE
 router.put('/:index', (req, res) => {
-    if(req.body.mintCondition === 'on'){
-        req.body.mintCondition = true
+    if(req.body.readyToListen === 'on'){
+        req.body.readyToListen = true
     } else {
-        req.body.mintCondition = false
+        req.body.readyToListen = false
     }
     records[req.params.index] = req.body
     res.redirect('/records')
