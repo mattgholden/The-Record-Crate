@@ -39,12 +39,6 @@ app.get('/records/new', (req,res) => {
     res.render('new.ejs')
 })
 
-//FIND
-// app.find({})
-
-//UPDATE
-// app.findByIdandUpdate()
-
 //SHOW
 app.get('/records/:indexOfRecordsArray', (req, res) => {
     res.render('show', {record: [req.params.indexOfRecordsArray]})
@@ -67,6 +61,21 @@ app.post('/records', (req, res) => {
 app.delete('/records/:index', (req,res) => {
     records.splice(req.params.index, 1)
     res.redirect('/records')
+})
+
+//UPDATE
+app.put('/fruits/:index', (req, res) => {
+    if(req.body.mintCondition === 'on'){
+        req.body.mintCondition = true
+    } else {
+        req.body.mintCondition = false
+    }
+    records[req.params.index] = req.body
+    res.redirect('/records')
+})
+//EDIT
+app.get('/records/:index/edit', (req, res) => {
+    res.render ('edit.ejs',{record: records[req.params.index], index: req.params.index})
 })
 
 //LISTEN

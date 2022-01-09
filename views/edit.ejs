@@ -1,0 +1,19 @@
+<h1>Edit Records</h1>
+<form action="/records/<%= index %>?_method=PUT" method="POST">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" value="<%= record.title %>"/>
+
+    <label for="artist">Artist</label>
+    <input type="text" name="artist" id="artist" value="<%= record.artist%>"/>
+
+    <label for="tracklist">Tracklist</label>
+    <input type="text" name="tracklist" value="<%= record.tracklist%>"/>
+
+    <label for="mintCondition">Mint Condition</label>
+    <input type="checkbox" name="MintCondition" id="mintCondition" 
+    <% if (record.mintContion === true) { %>
+    <% } %> />
+
+    <input type="submit" value="Edit the Record">
+
+</form>
