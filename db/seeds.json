@@ -1,0 +1,99 @@
+[
+    {
+        "title": "The 1975",
+        "artist": "The 1975" ,
+        "genre": "Alternative Rock", 
+        "numberOfSongs": 16, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "A Brief Inquiry Into Online Relationships",
+        "artist": "The 1975",
+        "genre": "Alternative Rock", 
+        "numberOfSongs": 15, 
+        "img": "",  
+        "readyToListen": false 
+    },
+    {
+        "title": "I like it when you sleep, for you are so beautiful yet so unaware of it" ,
+        "artist": "The 1975",
+        "genre": "Alternative Rock", 
+        "numberOfSongs": 17, 
+        "img": "", 
+        "readyToListen": true
+    },
+    {
+        "title": "We Are All We Need",
+        "artist": "Above & Beyond",
+        "genre": "Trance", 
+        "numberOfSongs": 16, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "Gold",
+        "artist": "Ace of Base",
+        "genre": "Electronic Pop", 
+        "numberOfSongs": 16, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "Machine Therapy",
+        "artist": "Alan Fitzpatrick",
+        "genre": "Techno", 
+        "numberOfSongs": 12, 
+        "img": "",  
+        "readyToListen": true 
+    },
+    {
+        "title": "Solid Gold Hits",
+        "artist": "Beastie Boys",
+        "genre": "Hip-Hop/Rap", 
+        "numberOfSongs": 15, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "Begin Again",
+        "artist": "Ben Bohmer",
+        "genre": "Electronic", 
+        "numberOfSongs": 11, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "BICEP",
+        "artist": "Bicep",
+        "genre": "Electronic", 
+        "numberOfSongs": 12, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "Isles",
+        "artist": "Bicep",
+        "genre": "Electronic", 
+        "numberOfSongs": 13, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "When We All Fall Asleep, Where Do We Go?",
+        "artist": "Billie Eilish",
+        "genre": "Alternative Pop", 
+        "numberOfSongs": 14, 
+        "img": "",  
+        "readyToListen": true
+    },
+    {
+        "title": "Christmas Classics",
+        "artist": "Bing Crosby",
+        "genre": "Holiday", 
+        "numberOfSongs": 16, 
+        "img": "",  
+        "readyToListen": false
+    }
+
+]

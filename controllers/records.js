@@ -35,24 +35,31 @@ router.post('/', (req, res) => {
 })
 
 //DELETE
-router.delete('/:index', (req,res) => {
-    records.splice(req.params.index, 1)
-    res.redirect('/records')
+router.delete('/:id', (req,res) => {
+    Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
+        res.redirect('/records')
+    })
 })
 
 //UPDATE
-router.put('/:index', (req, res) => {
+router.put('/:id', (req, res) => {
     if(req.body.readyToListen === 'on'){
         req.body.readyToListen = true
     } else {
         req.body.readyToListen = false
     }
-    records[req.params.index] = req.body
-    res.redirect('/records')
+    Record.findByIdAndUpdate(req.params.id, req.body,{new:true},(err, updatedModel) => {
+        console.log(updatedModel)
+        res.render('edit', {record: updatedModel})
+    } )
 })
+
 //EDIT
-router.get('/:index/edit', (req, res) => {
-    res.render ('edit.ejs',{record: records[req.params.index], index: req.params.index})
+router.get('/:id/edit', (req, res) => {
+    Record.findById(req.params.id, (err, record) => {
+        res.render('edit', {record})
+    })
+    // res.render ('edit.ejs',{record: records[req.params.index], index: req.params.index})
 })
 
 module.exports = router
