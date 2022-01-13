@@ -1,13 +1,14 @@
 const express = require ('express')
 const router = express.Router()
-const Record = require('../models/records')
-require('dotenv').config()
+const Record = require('../models/records.js')
 
 //ROUTES
 //INDEX
 router.get('/', (req, res) => {
     Record.find({}, (err, records) => {
-    res.render('index.ejs', {records})
+        res.render('index.ejs', {
+            records
+        })
     })
 })
 
@@ -50,7 +51,7 @@ router.put('/:id', (req, res) => {
         req.body.readyToListen = false
     }
     Record.findByIdAndUpdate(req.params.id, req.body,{new:true},(err, updatedModel) => {
-        console.log(updatedModel)
+        // console.log(updatedModel)
         res.render('edit', {record: updatedModel})
     } )
 })

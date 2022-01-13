@@ -1,8 +1,8 @@
 <%= record.title %> and the artist of this record is
     <%= record.artist %>.  The genre is <%= record.genre %>.
+    
     <% if (record.readyToListen) { %>
     <p> You are ready to listen to <%= record.title %></p>
     <% } else { %>
         <p>This record is not ready to be listened to.</p>
     <% } %>
-    

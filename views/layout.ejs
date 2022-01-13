@@ -10,8 +10,23 @@
 <body style="height: 100vh; display:flex; flex-direction:column; justify-content:space-between">
     <h1><a href="/records">Nav Bar</a></h1>
         <nav>
-            <a href="/records/new"> Add a New Record</a>
+            <ul>
+                <li><a href="/records">Records Index</a></li>
+                <li><a href="/records/new">Add a New Record</a></li>
+                <% if(!loggedIn) { %>
+                <li><a href="/session/signup">Sign Up</a></li>
+                <li><a href="/session/login">Log In</a></li>
+                <% } else { %>
+                <li><a href="/session/logout">Log Out</a></li>
+                <% } %>
+            </ul>
         </nav>
+        <% if(username) { %>
+            <p>Welcome, <%= username %></p>
+        <% } %>
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %> 
     <%- body %> 
         <p>Holden copywrite © 2021</p>
 </body>
