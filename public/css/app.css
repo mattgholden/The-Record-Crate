@@ -1,4 +1,9 @@
+nav{
+    width: 100%
+}
+
 nav > ul {
+    width: 100%;
     display: flex;
-    align-items: space-evenly
+    justify-content: space-evenly
 }

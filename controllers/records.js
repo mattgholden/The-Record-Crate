@@ -5,7 +5,7 @@ const Record = require('../models/records.js')
 //ROUTES
 //INDEX
 router.get('/', (req, res) => {
-    Record.find({}, (err, record) => {
+    Record.find({}, (err, records) => {
         res.render('index.ejs', {
             records,
             username: req.session.username

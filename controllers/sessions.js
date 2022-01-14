@@ -19,7 +19,7 @@ router.post('/signup', async (req, res, next) => {
             const userExists = await User.findOne({username: desiredUsername})
             if(userExists) {
                 res.send('Username already in use')
-                res.redirect('/session/signup')
+                res.redirect('/sessions/signup')
             } else {
                 const salt = bcrypt.genSaltSync(10)
                 const hashedPassword = bcrypt.hashSync(req.body.password, salt)
@@ -32,7 +32,7 @@ router.post('/signup', async (req, res, next) => {
             }
         } else {
             req.session.message = ('Passwords must match')
-            res.redirect('/session/login')
+            res.redirect('/sessions/login')
         }
     } catch(err) {
         next(err)
@@ -57,7 +57,7 @@ router.post('/login', async(req, res, next) => {
             }
         } else {
             req.session.message = 'Invalid username or password'
-            res.redirect('/session/login')
+            res.redirect('/sessions/login')
         }
     } catch (err) {
         next(err)
@@ -66,7 +66,7 @@ router.post('/login', async(req, res, next) => {
 
 router.get('/logout', (req, res) => {
     req.session.destroy()
-    res.redirect('/session/login')
+    res.redirect('/sessions/login')
 })
 
 module.exports = router

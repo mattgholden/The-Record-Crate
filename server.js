@@ -9,9 +9,7 @@ const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
 const session = require('express-session')
 const recordsController = require('./controllers/records')
-const sessionsController = require('./controllers/sessions')
-
-//Find styling etc.
+const sessionsController = require('./controllers/sessions')//Find styling etc.
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
@@ -36,12 +34,14 @@ app.use(session({
 //middleware for session's user
 app.use((req,res, next) => {
     res.locals.username = req.session.username
+    res.locals.loggedIn = req.session.loggedIn
+    res.locals.message = req.session.message
     next()
 })
 
 //controllers set
 app.use('/records', recordsController)
-app.use('/session', sessionsController)
+app.use('/sessions', sessionsController)
 
 app.get('/setCookie/:data', (req, res) => {
     req.session.data = req.params.data
