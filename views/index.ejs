@@ -1,6 +1,7 @@
 <nav>
     <a href="/records/new">Add a New Record</a>
 </nav>
+
 <% records.forEach( (record, index) => { %>
     <h1>
         <a href="/records/<%= record.id %>">
@@ -12,6 +13,3 @@
     </form>
     <a href='/records/<%= record.id %>/edit'>Edit</a>
 <% }) %>
-<!-- <div class ="container">
-    
-</div> -->

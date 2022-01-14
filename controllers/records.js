@@ -5,9 +5,11 @@ const Record = require('../models/records.js')
 //ROUTES
 //INDEX
 router.get('/', (req, res) => {
-    Record.find({}, (err, records) => {
+    Record.find({}, (err, record) => {
         res.render('index.ejs', {
-            records
+            records,
+            username: req.session.username
+
         })
     })
 })
@@ -19,8 +21,8 @@ router.get('/new', (req,res) => {
 
 //SHOW
 router.get('/:id', (req, res) => {
-    Record.findById(req.params.id, (err, record) => {
-        res.render('show', {record})
+    Record.findById(req.params.id, (err, records) => {
+        res.render('show.ejs', {records})
     })  
 })
 
@@ -32,14 +34,14 @@ router.post('/', (req, res) => {
        req.body.readyToListen = false 
     }
     Record.create(req.body, (err, createdRecord) => {
-        res.redirect('/records')
+        res.redirect('/records', {createdRecord})
     })
 })
 
 //DELETE
 router.delete('/:id', (req,res) => {
     Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
-        res.redirect('/records')
+        res.redirect('/records', {deletedRecord})
     })
 })
 
@@ -58,8 +60,8 @@ router.put('/:id', (req, res) => {
 
 //EDIT
 router.get('/:id/edit', (req, res) => {
-    Record.findById(req.params.id, (err, record) => {
-        res.render('edit', {record})
+    Record.findById(req.params.id, (err, records) => {
+        res.render('edit', {records})
     })
     // res.render ('edit.ejs',{record: records[req.params.index], index: req.params.index})
 })

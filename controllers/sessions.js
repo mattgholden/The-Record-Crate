@@ -14,7 +14,7 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', async (req, res, next) => {
     try{
-        if(req.body.password === req.body.verifyPassword) {
+        if(req.body.password === req.body.confirmPassword) {
             const desiredUsername = req.body.username
             const userExists = await User.findOne({username: desiredUsername})
             if(userExists) {
@@ -27,7 +27,6 @@ router.post('/signup', async (req, res, next) => {
                 const createdUser = await User.create(req.body)
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
-
                 console.log(createdUser)
                 res.redirect('/records')
             }
@@ -47,18 +46,18 @@ router.get('/login', (req, res) => {
 router.post('/login', async(req, res, next) => {
     try{
         const userToLogin = await User.findOne({username: req.body.username})
-        if(userLogin){
+        if(userToLogin){
             const validPassword = bcrypt.compareSync(req.body.password, userToLogin.password)
             if(validPassword){
             req.session.username = userToLogin.username
             req.session.loggedIn = true
             res.redirect('/records')
             } else {
-            res.redirect('/sessions/login')
+                res.redirect('/sessions/login')
             }
         } else {
-        req.session.message = 'Invalid username or password'
-        res.redirect('/session/login')
+            req.session.message = 'Invalid username or password'
+            res.redirect('/session/login')
         }
     } catch (err) {
         next(err)
