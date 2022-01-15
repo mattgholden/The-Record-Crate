@@ -2,6 +2,15 @@ const express = require ('express')
 const router = express.Router()
 const Record = require('../models/records.js')
 
+//middleware
+const authRequired = (req, res, next) => {
+    if (req.session.loggedIn){
+        next()
+    } else {
+        res.redirect('/sessions/login')
+    }
+}
+
 //ROUTES
 //INDEX
 router.get('/', (req, res) => {
@@ -15,19 +24,20 @@ router.get('/', (req, res) => {
 })
 
 //NEW
-router.get('/new', (req,res) => {
+//only users with an account can add new records
+router.get('/new', authRequired, (req,res) => {
     res.render('new.ejs')
 })
 
 //SHOW
-router.get('/:id', (req, res) => {
+router.get('/:id', authRequired, (req, res) => {
     Record.findById(req.params.id, (err, records) => {
         res.render('show.ejs', {records})
     })  
 })
 
 //CREATE
-router.post('/', (req, res) => {
+router.post('/', authRequired, (req, res) => {
     if(req.body.readyToListen === 'on'){
         req.body.readyToListen = true
     } else {
@@ -39,14 +49,14 @@ router.post('/', (req, res) => {
 })
 
 //DELETE
-router.delete('/:id', (req,res) => {
+router.delete('/:id', authRequired, (req,res) => {
     Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
         res.redirect('/records', {deletedRecord})
     })
 })
 
 //UPDATE
-router.put('/:id', (req, res) => {
+router.put('/:id', authRequired, (req, res) => {
     if(req.body.readyToListen === 'on'){
         req.body.readyToListen = true
     } else {
@@ -59,7 +69,7 @@ router.put('/:id', (req, res) => {
 })
 
 //EDIT
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit', authRequired, (req, res) => {
     Record.findById(req.params.id, (err, records) => {
         res.render('edit', {records})
     })

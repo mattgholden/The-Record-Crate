@@ -53,10 +53,10 @@ router.post('/login', async(req, res, next) => {
             req.session.loggedIn = true
             res.redirect('/records')
             } else {
+                req.session.message = 'Invalid username or password'
                 res.redirect('/sessions/login')
             }
         } else {
-            req.session.message = 'Invalid username or password'
             res.redirect('/sessions/login')
         }
     } catch (err) {

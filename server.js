@@ -2,8 +2,7 @@ require('dotenv').config()
 //DEPENDENCIES
 const express = require('express')
 const app = express()
-// const PORT = process.env.PORT
-// const SESSION_SECRET = process.env.SESSION_SECRET
+//CONFIG
 const { PORT, SESSION_SECRET } = process.env
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
@@ -35,11 +34,27 @@ app.use(session({
 app.use((req,res, next) => {
     res.locals.username = req.session.username
     res.locals.loggedIn = req.session.loggedIn
-    res.locals.message = req.session.message
     next()
 })
 
+//Flash Message for all routes
+app.use((req, res, next) => {
+    res.locals.message = req.session.message
+    req.session.message = ""
+    next()
+})
+
+//Limit access
+const authRequired = (req, res, next) => {
+    if (req.session.loggedIn){
+        next()
+    } else {
+        res.redirect('/sessions/login')
+    }
+}
+
 //controllers set
+// app.use('/records', authRequired, recordsController)
 app.use('/records', recordsController)
 app.use('/sessions', sessionsController)
 
