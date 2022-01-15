@@ -1,3 +1,10 @@
+h1{
+    background: whitesmoke;
+    margin: 0;
+    margin-bottom: .5em;
+    padding: 1em;
+}
+
 nav{
     width: 100%
 }
@@ -6,4 +13,9 @@ nav > ul {
     width: 100%;
     display: flex;
     justify-content: space-evenly
+}
+
+body{
+    background: url(https://i.imgur.com/OldrBhE.jpg)
+    
 }
