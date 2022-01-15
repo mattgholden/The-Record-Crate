@@ -3,7 +3,8 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 //CONFIG
-const { PORT, SESSION_SECRET } = process.env
+const { SESSION_SECRET } = process.env
+app.set('port', process.env.PORT || 8008)
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
 const session = require('express-session')
@@ -68,5 +69,5 @@ app.get('/getSessionInfo', (req, res) => {
 })
 
 //LISTEN
-app.listen(PORT, () => console.log(`The record spins!  On port: ${PORT}`))
+app.listen(app.get('port'), () => console.log(`The record spins!  On port: ${app.get('port')}`))
 
