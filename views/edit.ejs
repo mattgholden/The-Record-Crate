@@ -1,23 +1,23 @@
 <h1>Edit This Record</h1>
-<form action="/records/<%= record.id %>?_method=PUT" method="POST">
+<form action="/records/<%= records.id %>?_method=PUT" method="POST">
     <label for="title">Title</label>
-    <input type="text" name="title" id="title" value="<%= record.title %>"/>
+    <input type="text" name="title" id="title" value="<%= records.title %>"/>
 
     <label for="artist">Artist</label>
-    <input type="text" name="artist" id="artist" value="<%= record.artist%>"/>
+    <input type="text" name="artist" id="artist" value="<%= records.artist%>"/>
 
     <label for="genre">Genre</label>
-    <input type="text" name="genre" id="genre" value="<%= record.genre%>" />
+    <input type="text" name="genre" id="genre" value="<%= records.genre%>" />
 
     <label for="numberOfSongs">Number of Songs</label>
-    <input type="text" name="numberOfSongs" value="<%= record.numberOfSongs%>"/>
+    <input type="text" name="numberOfSongs" value="<%= records.numberOfSongs%>"/>
     
-    <label for="img">Image URL</label>
-    <input type="text" name="img" value="<%=record.img%>"/>
+    <label for="img">Images</label>
+    <input type="text" name="img" value="<%=records.img%>"/>
 
     <label for="readyToListen">Ready To Listen</label>
     <input type="checkbox" name="Ready To Listen" id="readyToListen" 
-    <% if (record.readyToListen === true) { %>
+    <% if (records.readyToListen === true) { %>
     <% } %> />
 
     <input type="submit" value="Edit the Record">

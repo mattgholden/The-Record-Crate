@@ -1,15 +1,23 @@
-<nav>
-    <a href="/records/new">Add a New Record</a>
-</nav>
 
-<% records.forEach( (record, index) => { %>
-    <h1>
-        <a href="/records/<%= record.id %>">
-            <%= record.title %>
-        </a>
-    </h1>
-    <form action='/records/<%= record.id %>?_method=DELETE' method="POST">
-        <input type="submit" value="DELETE"/>
-    </form>
-    <a href='/records/<%= record.id %>/edit'>Edit</a>
-<% }) %>
+<!-- <img src="/public/img/<%= records.image %>" alt="Image of <%= records.title %>" style="max-width:150px;"> -->
+
+<div class="container">
+    <div class="row">
+      <div class="card" style="width: 20 rem">
+        <img src="/public/img/<%= records.image %>" class="card-img top" alt="<%= records.title %>">
+        <div class="card-body">
+            <% records.forEach( (records, index) => { %>
+                <h1>
+                    <a href="/records/<%= records.id %>">
+                        <%= records.title %>
+                    </a>
+                </h1>
+                <form action='/records/<%= records.id %>?_method=DELETE' method="POST">
+                    <input type="submit" value="DELETE"/>
+                </form>
+                <a href='/records/<%= records.id %>/edit'>Edit</a>
+             <% }) %>
+        </div>
+    </div>
+</div>
+

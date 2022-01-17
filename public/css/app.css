@@ -16,6 +16,11 @@ nav > ul {
 }
 
 body{
-    background: url(https://i.imgur.com/OldrBhE.jpg)
-    
+   display: grid;
+   grid-template-columns: repeat(5, 1fr, 1fr);
+   grid-gap: 10 rem
+}
+
+img{
+    width: 12 rem
 }

@@ -4,7 +4,7 @@
         "artist": "The 1975" ,
         "genre": "Alternative Rock", 
         "numberOfSongs": 16, 
-        "img": "https://i.imgur.com/UIGEYu5.jpg",  
+        "img": "",  
         "readyToListen": true
     },
     {
@@ -12,7 +12,7 @@
         "artist": "The 1975",
         "genre": "Alternative Rock", 
         "numberOfSongs": 15, 
-        "img": "https://imgur.com/DDQAGaD",  
+        "img": "",  
         "readyToListen": false 
     },
     {
@@ -332,7 +332,7 @@
         "artist": "RÜFÜS DU SOL",
         "genre": "Electro-Pop", 
         "numberOfSongs": 11, 
-        "img": "",  
+        "img": "/img/Bloom.jpg",  
         "readyToListen": true 
     },
     {
