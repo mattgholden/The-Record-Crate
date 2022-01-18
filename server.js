@@ -5,11 +5,13 @@ const app = express()
 //CONFIG
 const { SESSION_SECRET } = process.env
 app.set('port', process.env.PORT || 8008)
+
 const methodOverride = require('method-override')
 const expressEjsLayout = require('express-ejs-layouts')
 const session = require('express-session')
 const recordsController = require('./controllers/records')
 const sessionsController = require('./controllers/sessions')//Find styling etc.
+
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
@@ -19,11 +21,11 @@ const routeHit = (req,res,next) => {
 }
 app.use(routeHit)
 
-app.use(express.urlencoded({extended:false}))
+
 
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
-
+app.use(express.urlencoded({extended:false}))
 //Session Middleware
 app.use(session({
     secret: SESSION_SECRET,

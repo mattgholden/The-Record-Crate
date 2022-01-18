@@ -1,8 +1,9 @@
 const express = require('express')
-const bcrypt = require('bcrypt')
-const User = require('../models/users.js')
-
 const router = express.Router()
+const User = require('../models/users.js')
+const bcrypt = require('bcrypt')
+
+
 
 router.get('/', (req, res) => {
     res.send('Session controller works')
@@ -14,26 +15,31 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', async (req, res, next) => {
     try{
-        if(req.body.password === req.body.confirmPassword) {
+        console.log(req.body)
+        // if(req.body.password === req.body.confirmPassword) {
             const desiredUsername = req.body.username
+            const desiredPassword = req.body.password
             const userExists = await User.findOne({username: desiredUsername})
             if(userExists) {
                 res.send('Username already in use')
                 res.redirect('/sessions/signup')
             } else {
                 const salt = bcrypt.genSaltSync(10)
-                const hashedPassword = bcrypt.hashSync(req.body.password, salt)
-                req.body.password = hashedPassword
-                const createdUser = await User.create(req.body)
+                const securePassword = bcrypt.hashSync(desiredPassword, salt)
+                const newUser = ({
+                    username: desiredUsername,
+                    password: securePassword
+                })
+                const createdUser = await User.create(newUser)
                 req.session.username = createdUser.username
                 req.session.loggedIn = true
                 console.log(createdUser)
                 res.redirect('/records')
             }
-        } else {
-            req.session.message = ('Passwords must match')
-            res.redirect('/sessions/login')
-        }
+        // } else {
+        //     req.session.message = ('Passwords must match')
+        //     res.redirect('/sessions/login')
+        // }
     } catch(err) {
         next(err)
     }
