@@ -4,7 +4,7 @@
         "artist": "The 1975" ,
         "genre": "Alternative Rock", 
         "numberOfSongs": 16, 
-        "img": "",  
+        "img": "/public/img/Bloom.jpeg.jpg",  
         "readyToListen": true
     },
     {
