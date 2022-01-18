@@ -1,9 +1,8 @@
 const express = require('express')
-const router = express.Router()
-const User = require('../models/users.js')
 const bcrypt = require('bcrypt')
+const User = require('../models/users.js')
 
-
+const router = express.Router()
 
 router.get('/', (req, res) => {
     res.send('Session controller works')

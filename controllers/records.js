@@ -43,15 +43,15 @@ router.post('/', authRequired, (req, res) => {
     } else {
        req.body.readyToListen = false 
     }
-    Record.create(req.body, (err, createRecord) => {
-        res.redirect('/records', {createRecord})
+    Record.create(req.body, (err, createdRecord) => {
+        res.redirect('/records', {createdRecord})
     })
 })
 
 //DELETE
 router.delete('/:id', authRequired, (req,res) => {
-    Record.findByIdAndRemove(req.params.id, (err, deleteRecord) => {
-        res.redirect('/records', {deleteRecord})
+    Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
+        res.redirect('/records', {deletedRecord})
     })
 })
 
