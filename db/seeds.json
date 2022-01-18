@@ -332,7 +332,7 @@
         "artist": "RÜFÜS DU SOL",
         "genre": "Electro-Pop", 
         "numberOfSongs": 11, 
-        "img": "https://i.imgur.com/UIGEYu5.jpg",  
+        "img": "Bloom.jpeg.jpg",  
         "readyToListen": true 
     },
     {
@@ -388,7 +388,7 @@
         "artist": "U2",
         "genre": "Pop Rock", 
         "numberOfSongs": 10, 
-        "img": "",  
+        "img": "War.jpeg.jpg",  
         "readyToListen": true 
     }
 ]

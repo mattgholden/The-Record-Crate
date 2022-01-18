@@ -22,7 +22,6 @@ const routeHit = (req,res,next) => {
 app.use(routeHit)
 
 
-
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended:false}))
@@ -57,7 +56,6 @@ const authRequired = (req, res, next) => {
 }
 
 //controllers set
-// app.use('/records', authRequired, recordsController)
 app.use('/records', recordsController)
 app.use('/sessions', sessionsController)
 

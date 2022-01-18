@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Red+Hat+Mono:wght@300&display=swap');
 
 h1{
+    text-decoration: none;
     font-family:'Audiowide', cursive;
     background-image: whitesmoke;
     margin: 0;
     margin-bottom: .5em;
     padding: 1em;
     text-align: center
+}
+
+.main{
+    text-decoration: none
 }
 
 nav{
@@ -23,26 +28,28 @@ a {
     text-decoration: none;
     text-shadow: 1px 1px 1px black;
     font-size: 1.5em;
-    /* background: rgba(104, 112, 135, 0.9); */
-    /* padding: .25em;
-  margin: .5em; */
 }
 
-a:hover {
-    color: brown;
+label{
+    font-family:'Audiowide', cursive;
 }
+
 
 li {
+    text-decoration: none;
     list-style: none;
 }
 
 li a {
+    text-decoration: none;
     color: rgb(209, 207, 227);
+    font-family:'Audiowide', cursive;
 }
 
-body{
-    background-color: purple;
+p{
+    font-family:'Audiowide', cursive;
 }
+
 
 
 

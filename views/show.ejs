@@ -1,6 +1,6 @@
 <img src="/public/img/<%= records.image %>" class="img-fluid" alt="Image of <%= records.title %>">
-You have chosen your <%= records.title %> record by
-    <%= records.artist %>.  Genre: <%= records.genre %>.
+<p>You have chosen your <%= records.title %> record by <%= records.artist %>.</p>
+    <p>Genre: <%= records.genre %>. </p>
     <% if (records.readyToListen) { %>
     <p> It looks like you are ready to listen to <%= records.title %>!</p>
     <% } else { %>
