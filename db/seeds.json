@@ -4,7 +4,7 @@
         "artist": "The 1975" ,
         "genre": "Alternative Rock", 
         "numberOfSongs": 16, 
-        "img": "/public/img/Bloom.jpg",  
+        "img": "https://i.imgur.com/fu46TFu.png",  
         "readyToListen": true
     },
     {
@@ -12,7 +12,7 @@
         "artist": "The 1975",
         "genre": "Alternative Rock", 
         "numberOfSongs": 15, 
-        "img": "",  
+        "img": "https://i.imgur.com/nMDNvxH.jpg",  
         "readyToListen": false 
     },
     {
@@ -20,7 +20,7 @@
         "artist": "The 1975",
         "genre": "Alternative Rock", 
         "numberOfSongs": 17, 
-        "img": "", 
+        "img": "https://i.imgur.com/w3Mg2Br.jpg", 
         "readyToListen": true
     },
     {
@@ -28,7 +28,7 @@
         "artist": "Above & Beyond",
         "genre": "Trance", 
         "numberOfSongs": 16, 
-        "img": "",  
+        "img": "https://i.imgur.com/EAQ8kFh.jpg",  
         "readyToListen": true
     },
     {
@@ -36,7 +36,7 @@
         "artist": "Ace of Base",
         "genre": "Electronic Pop", 
         "numberOfSongs": 16, 
-        "img": "",  
+        "img": "https://i.imgur.com/3kxDSon.jpg",  
         "readyToListen": true
     },
     {
@@ -44,7 +44,7 @@
         "artist": "Alan Fitzpatrick",
         "genre": "Techno", 
         "numberOfSongs": 12, 
-        "img": "",  
+        "img": "https://i.imgur.com/dH02a7t.jpg",  
         "readyToListen": true 
     },
     {
@@ -52,7 +52,7 @@
         "artist": "Beastie Boys",
         "genre": "Hip-Hop/Rap", 
         "numberOfSongs": 15, 
-        "img": "",  
+        "img": "https://i.imgur.com/DzhUWd6.jpg",  
         "readyToListen": true
     },
     {
@@ -60,7 +60,7 @@
         "artist": "Ben Bohmer",
         "genre": "Electronic", 
         "numberOfSongs": 11, 
-        "img": "",  
+        "img": "https://i.imgur.com/dZN6tCZ.jpg",  
         "readyToListen": true
     },
     {
@@ -68,7 +68,7 @@
         "artist": "Bicep",
         "genre": "Electronic", 
         "numberOfSongs": 12, 
-        "url": "https://i.imgur.com/UIGEYu5.jpg",  
+        "img": "https://i.imgur.com/HQpdST0.jpg",  
         "readyToListen": true
     },
     {
@@ -76,7 +76,7 @@
         "artist": "Bicep",
         "genre": "Electronic", 
         "numberOfSongs": 13, 
-        "img": "",  
+        "img": "https://i.imgur.com/UIGEYu5.jpg",  
         "readyToListen": true
     },
     {
@@ -84,255 +84,23 @@
         "artist": "Billie Eilish",
         "genre": "Alternative Pop", 
         "numberOfSongs": 14, 
-        "img": "",  
+        "img": "https://i.imgur.com/z86JUfE.jpg",  
         "readyToListen": true
-    },
-    {
-        "title": "Christmas Classics",
-        "artist": "Bing Crosby",
-        "genre": "Holiday", 
-        "numberOfSongs": 16, 
-        "img": "",  
-        "readyToListen": false
-    },
-    {
-        "title": "Believe",
-        "artist": "Cher",
-        "genre": "Electro-Pop", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Human After All",
-        "artist": "Daft Punk",
-        "genre": "Electronic", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Random Access Memories",
-        "artist": "Daft Punk",
-        "genre": "Electro-Pop, Funk", 
-        "numberOfSongs": 13, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "TRON: Legacy (Original Motion Picture Soundtrack)",
-        "artist": "Daft Punk",
-        "genre": "Electronic, Stage & Screen", 
-        "numberOfSongs": 22, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Ecstasy",
-        "artist": "Disclosure",
-        "genre": "House", 
-        "numberOfSongs": 5, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Energy",
-        "artist": "Disclosure",
-        "genre": "House", 
-        "numberOfSongs": 11, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Settle",
-        "artist": "Disclosure",
-        "genre": "House, UK Garage", 
-        "numberOfSongs": 14, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Future Nostalgia: The Moonlight Edition",
-        "artist": "Dua Lipa",
-        "genre": "Electro-Pop, Hip-Hop, Latin", 
-        "numberOfSongs": 19, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Curtain Call: The Hits",
-        "artist": "Eminem",
-        "genre": "Hip-Hop/Rap", 
-        "numberOfSongs": 17, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Relapse",
-        "artist": "Eminem",
-        "genre": "Hip-Hop/Rap", 
-        "numberOfSongs": 20, 
-        "img": "",  
-        "readyToListen": false
-    },
-    {
-        "title": "Walking On A Dream",
-        "artist": "Empire Of The Sun",
-        "genre": "Electronic-Pop, Rock", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "2.0",
-        "artist": "Faithless",
-        "genre": "Electronic", 
-        "numberOfSongs": 12, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Songs For Swingin' Lovers",
-        "artist": "Frank Sinatra",
-        "genre": "Jazz", 
-        "numberOfSongs": 16, 
-        "img": "",  
-        "readyToListen": false 
-    },
-    {
-        "title": "I Wanna Be Like You",
-        "artist": "Hammer",
-        "genre": "House", 
-        "numberOfSongs": 2, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Recovery",
-        "artist": "Hot Since 82",
-        "genre": "House", 
-        "numberOfSongs": 14, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Everything Is Debatable",
-        "artist": "Hellogoodbye",
-        "genre": "Alternative Rock", 
-        "numberOfSongs": 11, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Impulse",
-        "artist": "Ilan Bluestone",
-        "genre": "Trance", 
-        "numberOfSongs": 18, 
-        "img": "",  
-        "readyToListen": true
-    },
-    {
-        "title": "Chromatica",
-        "artist": "Lady Gaga",
-        "genre": "Electro-Pop", 
-        "numberOfSongs": 16, 
-        "img": "",  
-        "readyToListen": true 
     },
     {
         "title": "Into Clouds",
         "artist": "Luttrell",
         "genre": "Electronic", 
         "numberOfSongs": 10, 
-        "img": "",  
+        "img": "https://i.imgur.com/moCcGln.jpg",  
         "readyToListen": true
-    },
-    {
-        "title": "Lucky Ones",
-        "artist": "Luttrell",
-        "genre": "Electronic", 
-        "numberOfSongs": 11, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Conjure Infinity",
-        "artist": "Maceo Plex",
-        "genre": "Techno", 
-        "numberOfSongs": 2, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Sexual Healing - The Remixes ",
-        "artist": "Marvin Gaye",
-        "genre": "Electronic, Hip Hop, Funk / Soul", 
-        "numberOfSongs": 7, 
-        "img": "",  
-        "readyToListen": false  
-    },
-    {
-        "title": "Bad",
-        "artist": "Michael Jackson",
-        "genre": "Rock, Funk / Soul, Pop", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Nothing",
-        "artist": "N*E*R*D",
-        "genre": "Funk / Soul, Hip Hop", 
-        "numberOfSongs": 14, 
-        "img": "",  
-        "readyToListen": true  
-    },
-    {
-        "title": "His Majesty's Pop Life / The Purple Mix Club",
-        "artist": "Prince",
-        "genre": "Funk / Soul, Pop", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": false 
-    },
-    {
-        "title": "Exotica",
-        "artist": "Purple Disco Machine",
-        "genre": "Nu-Disco", 
-        "numberOfSongs": 14, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Poolside",
-        "artist": "Opolopo",
-        "genre": "Funk / Soul, House", 
-        "numberOfSongs": 3, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Polydans",
-        "artist": "Roosevelt",
-        "genre": "Electro-Pop", 
-        "numberOfSongs": 10, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "Roosevelt",
-        "artist": "Roosevelt",
-        "genre": "Electro-Pop", 
-        "numberOfSongs": 12, 
-        "img": "",  
-        "readyToListen": true 
     },
     {
         "title": "Bloom",
         "artist": "RÜFÜS DU SOL",
         "genre": "Electro-Pop", 
         "numberOfSongs": 11, 
-        "img": "/public/img/Bloom.jpg",  
+        "img": "https://i.imgur.com/C9022Tb.jpg",  
         "readyToListen": true 
     },
     {
@@ -340,23 +108,15 @@
         "artist": "RÜFÜS DU SOL",
         "genre": "Electro-Pop", 
         "numberOfSongs": 9, 
-        "img": "",  
+        "img": "https://i.imgur.com/pv811vj.jpg",  
         "readyToListen": true 
-    },
-    {
-        "title": "Music Sounds Better With You",
-        "artist": "Stardust",
-        "genre": "House", 
-        "numberOfSongs": 2, 
-        "img": "",  
-        "readyToListen": true
     },
     {
         "title": "Set In Stone",
         "artist": "Stick Figure",
         "genre": "Reggae", 
         "numberOfSongs": 14, 
-        "img": "",  
+        "img": "https://i.imgur.com/pXliPVy.jpg",  
         "readyToListen": true 
     },
     {
@@ -364,31 +124,15 @@
         "artist": "Trans-Siberian Orchestra",
         "genre": "Hard Rock", 
         "numberOfSongs": 17, 
-        "img": "",  
+        "img": "https://i.imgur.com/Z1Gt8mi.jpg",  
         "readyToListen": true 
-    },
-    {
-        "title": "A Charlie Brown Christmas",
-        "artist": "Vince Guaraldi Trio",
-        "genre": "Jazz, Stage & Screen", 
-        "numberOfSongs": 12, 
-        "img": "",  
-        "readyToListen": true 
-    },
-    {
-        "title": "All That You Can't Leave Behind",
-        "artist": "U2",
-        "genre": "Pop Rock", 
-        "numberOfSongs": 11, 
-        "img": "",  
-        "readyToListen": false
-    },
+    }, 
     {
         "title": "War",
         "artist": "U2",
         "genre": "Pop Rock", 
         "numberOfSongs": 10, 
-        "img": "War.jpeg.jpg",  
+        "img": "https://i.imgur.com/2GcLPhj.jpg",  
         "readyToListen": true 
     }
 ]
