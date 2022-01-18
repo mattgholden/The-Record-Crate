@@ -18,7 +18,6 @@ router.get('/', (req, res) => {
         res.render('index.ejs', {
             records,
             username: req.session.username
-
         })
     })
 })
@@ -51,7 +50,7 @@ router.post('/', authRequired, (req, res) => {
 //DELETE
 router.delete('/:id', authRequired, (req,res) => {
     Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
-        res.redirect('/records', {deletedRecord})
+        res.redirect('/records.js', {deletedRecord})
     })
 })
 

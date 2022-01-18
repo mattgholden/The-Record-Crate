@@ -14,8 +14,6 @@ router.get('/signup', (req, res) => {
 
 router.post('/signup', async (req, res, next) => {
     try{
-        console.log(req.body)
-        // if(req.body.password === req.body.confirmPassword) {
             const desiredUsername = req.body.username
             const userExists = await User.findOne({username: desiredUsername})
             if(userExists) {
