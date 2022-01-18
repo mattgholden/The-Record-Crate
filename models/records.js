@@ -5,7 +5,7 @@ const recordSchema = new mongoose.Schema({
     artist: {type: String, required: true},
     genre: {type: String},
     numberOfSongs: {type: Number},
-    img: {type: String},
+    url: {type: String},
     readyToListen: {type: Boolean, required: true}
 })
 

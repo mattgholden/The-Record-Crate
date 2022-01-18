@@ -43,15 +43,15 @@ router.post('/', authRequired, (req, res) => {
     } else {
        req.body.readyToListen = false 
     }
-    Record.create(req.body, (err, createdRecord) => {
-        res.redirect('/records', {createdRecord})
+    Record.create(req.body, (err, createRecord) => {
+        res.redirect('/records', {createRecord})
     })
 })
 
 //DELETE
 router.delete('/:id', authRequired, (req,res) => {
-    Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
-        res.redirect('/records', {deletedRecord})
+    Record.findByIdAndRemove(req.params.id, (err, deleteRecord) => {
+        res.redirect('/records', {deleteRecord})
     })
 })
 
@@ -64,7 +64,7 @@ router.put('/:id', authRequired, (req, res) => {
     }
     Record.findByIdAndUpdate(req.params.id, req.body,{new:true},(err, updatedModel) => {
         // console.log(updatedModel)
-        res.render('edit', {record: updatedModel})
+        res.render('edit', {records: updatedModel})
     } )
 })
 

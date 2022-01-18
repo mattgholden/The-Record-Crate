@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Red+Hat+Mono:wght@300&display=swap');
+
 h1{
-    background: whitesmoke;
+    font-family:'Audiowide', cursive;
+    background-image: whitesmoke;
     margin: 0;
     margin-bottom: .5em;
     padding: 1em;
+    text-align: center
 }
 
 nav{
@@ -15,12 +19,31 @@ nav > ul {
     justify-content: space-evenly
 }
 
-body{
-   display: grid;
-   grid-template-columns: repeat(5, 1fr, 1fr);
-   grid-gap: 10 rem
+a {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.5em;
+    /* background: rgba(104, 112, 135, 0.9); */
+    /* padding: .25em;
+  margin: .5em; */
 }
 
-img{
-    width: 12 rem
+a:hover {
+    color: brown;
 }
+
+li {
+    list-style: none;
+}
+
+li a {
+    color: rgb(209, 207, 227);
+}
+
+body{
+    background-color: purple;
+}
+
+
+
+
