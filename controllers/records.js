@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const Record = require('../models/records')
+const Record = require('../models/records.js')
 
 //middleware
 const authRequired = (req, res, next) => {

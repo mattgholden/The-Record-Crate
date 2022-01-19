@@ -15,16 +15,17 @@ const sessionsController = require('./controllers/sessions')//Find styling etc.
 app.use(express.static('public'))
 app.use(methodOverride('_method'))
 
-const routeHit = (req,res,next) => {
-    console.log("A new route was just hit")
-    next()
-}
-app.use(routeHit)
+// const routeHit = (req,res,next) => {
+//     console.log("A new route was just hit")
+//     next()
+// }
+// app.use(routeHit)
 
+app.use(express.urlencoded({extended:false}))
 
 app.use(expressEjsLayout)
 app.set('view engine', 'ejs')
-app.use(express.urlencoded({extended:false}))
+
 //Session Middleware
 app.use(session({
     secret: SESSION_SECRET,

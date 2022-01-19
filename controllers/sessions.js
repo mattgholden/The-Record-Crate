@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/signup', (req, res) => {
-    res.render('sessions/signup')
+    res.render('sessions/signup.ejs')
 })
 
 router.post('/signup', async (req, res, next) => {
