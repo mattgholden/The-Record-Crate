@@ -12,4 +12,3 @@ Record.deleteMany({})
     process.exit()
 })
 
-module.exports = mongoose
