@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const Record = require('../models/records.js')
+const Record = require('../models/records')
 
 //middleware
 const authRequired = (req, res, next) => {
@@ -15,7 +15,7 @@ const authRequired = (req, res, next) => {
 //INDEX
 router.get('/', (req, res) => {
     Record.find({}, (err, records) => {
-        res.render('index.ejs', {
+        res.render('index', {
             records,
             username: req.session.username
         })
@@ -25,13 +25,13 @@ router.get('/', (req, res) => {
 //NEW
 //only users with an account can add new records
 router.get('/new', authRequired, (req,res) => {
-    res.render('new.ejs')
+    res.render('new')
 })
 
 //SHOW
 router.get('/:id', authRequired, (req, res) => {
     Record.findById(req.params.id, (err, records) => {
-        res.render('show.ejs', {records})
+        res.render('show', {records})
     })  
 })
 
@@ -50,7 +50,7 @@ router.post('/', authRequired, (req, res) => {
 //DELETE
 router.delete('/:id', authRequired, (req,res) => {
     Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
-        res.redirect('/records.js', {deletedRecord})
+        res.redirect('/records', {deletedRecord})
     })
 })
 
@@ -72,7 +72,6 @@ router.get('/:id/edit', authRequired, (req, res) => {
     Record.findById(req.params.id, (err, records) => {
         res.render('edit', {records})
     })
-    // res.render ('edit.ejs',{record: records[req.params.index], index: req.params.index})
 })
 
 module.exports = router

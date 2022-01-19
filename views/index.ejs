@@ -9,10 +9,10 @@
                         <%= records.title %>
                         </a>
                     </h1>
-                    <form action='/records.js<%= records.id %>?_method=DELETE' method="POST">
+                    <form action='/records<%= records.id %>?_method=DELETE' method="POST">
                         <input class="btn btn-danger" type="submit" value= "✕ DELETE"/>
                     </form>
-                    <form action='/records.js<%= records.id %>/edit'>
+                    <form action='/records<%= records.id %>/edit'>
                         <input class="btn btn-primary" type="submit" value="✎ EDIT"/>
                     </form>
                 </div>

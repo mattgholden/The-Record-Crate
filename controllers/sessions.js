@@ -1,6 +1,6 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
-const User = require('../models/users.js')
+const User = require('../models/users')
 
 const router = express.Router()
 
@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 })
 
 router.get('/signup', (req, res) => {
-    res.render('sessions/signup.ejs')
+    res.render('sessions/signup')
 })
 
 router.post('/signup', async (req, res, next) => {
