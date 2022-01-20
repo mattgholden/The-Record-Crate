@@ -36,7 +36,7 @@ router.get('/:id', authRequired, (req, res) => {
 })
 
 //CREATE
-router.post('/records', authRequired, (req, res) => {
+router.post('/', authRequired, (req, res) => {
     if(req.body.readyToListen === 'on'){
         req.body.readyToListen = true
     } else {
@@ -56,7 +56,7 @@ router.put('/:id', authRequired, (req, res) => {
     }
     Record.findByIdAndUpdate(req.params.id, req.body,{new:true},(err, updatedModel) => {
         // console.log(updatedModel)
-        res.render('edit', {records: updatedModel})
+        res.redirect('/records')
     } )
 })
 
