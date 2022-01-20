@@ -1,6 +1,6 @@
 const express = require ('express')
 const router = express.Router()
-const Record = require('../models/records.js')
+const Record = require('../models/records')
 
 //middleware
 const authRequired = (req, res, next) => {
@@ -30,26 +30,19 @@ router.get('/new', authRequired, (req,res) => {
 
 //SHOW
 router.get('/:id', authRequired, (req, res) => {
-    Record.findById(req.params.id, (err, records) => {
-        res.render('show', {records})
+    Record.findById(req.params.id, (err, recordSelected) => {
+        res.render('show', {records: recordSelected})
     })  
 })
 
 //CREATE
-router.post('/', authRequired, (req, res) => {
+router.post('/records', authRequired, (req, res) => {
     if(req.body.readyToListen === 'on'){
         req.body.readyToListen = true
     } else {
        req.body.readyToListen = false 
     }
     Record.create(req.body, (err, createdRecord) => {
-        res.redirect('/records')
-    })
-})
-
-//DELETE
-router.delete('/:id', authRequired, (req,res) => {
-    Record.findByIdAndRemove(req.params.id, (err, deletedRecord) => {
         res.redirect('/records')
     })
 })
@@ -71,6 +64,13 @@ router.put('/:id', authRequired, (req, res) => {
 router.get('/:id/edit', authRequired, (req, res) => {
     Record.findById(req.params.id, (err, records) => {
         res.render('edit', {records})
+    })
+})
+
+//DELETE
+router.delete('/:id', authRequired, (req,res) => {
+    Record.findByIdAndDelete(req.params.id, (err, deletedRecord) => {
+        res.redirect('/records')
     })
 })
 
