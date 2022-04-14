@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Red+Hat+Mono:wght@300&display=swap');
 
-h1{
+.navbar-brand{
     text-decoration: none;
+    font-size: x-large;
     font-family:'Audiowide', cursive;
-    background-image: whitesmoke;
+    color:blue;
     margin: 0;
     margin-bottom: .5em;
     padding: 1em;
@@ -14,9 +15,11 @@ h1{
     text-decoration: none
 }
 
-nav{
-    width: 100%
-}
+/* nav{
+    width: 100%;
+    overflow: hidden;
+    background-color: orangered;
+} */
 
 nav > ul {
     width: 100%;
@@ -50,6 +53,17 @@ p{
     font-family:'Audiowide', cursive;
 }
 
+img {
+    float: left;
+    width:  50px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.background{
+    background-size: contain;
+    background-repeat: repeat;
+}
 
 
 
