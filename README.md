@@ -3,7 +3,7 @@
 
 ### Application Story
 
-
+https://the-record-crate.herokuapp.com/records
 
 ### Technologies
 -----------------
