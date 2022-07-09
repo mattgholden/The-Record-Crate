@@ -4,6 +4,7 @@ const User = require('../models/users')
 
 const router = express.Router()
 
+//Main Route
 router.get('/', (req, res) => {
     res.send('Session controller works')
 })
