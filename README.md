@@ -3,6 +3,7 @@
 
 ### Application Story
 
+This application allows users to save their vinyl music libraries digitally.  
 https://the-record-crate.herokuapp.com/records
 
 ### Technologies
