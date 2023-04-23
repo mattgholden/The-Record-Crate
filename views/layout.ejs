@@ -18,28 +18,28 @@
                 <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="/records">Home |<span class="sr-only"></span></a>
+                            <a class="active" href="/records">Home |<span class="sr-only"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/records/new"> Add a New Record |</a>
+                            <a class="nav-item active" href="/records/new">  Add a New Record |</a>
                         </li>
                     <% if(!loggedIn) { %>
                         <li class="nav-item">
-                            <a class="nav-link" href="/sessions/signup"> Sign Up |</a>
+                            <a class="nav-item active" href="/sessions/signup"> Sign Up |</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/sessions/login"> Log In</a>
+                            <a class="btn btn-primary navbar-btn" href="/sessions/login"> Log In</a>
                         </li>
                     <% } else { %>
                         <li class="nav-item">
-                            <a class="nav-link" href="/sessions/logout">Log Out</a>
+                            <a class="btn btn-danger navbar-btn" href="/sessions/logout">Log Out</a>
                         </li>
                     <% } %>
                 </div>
         </nav>
         <!-- welcome the user after login -->
             <% if(username) { %>
-                <p>Welcome, <%= username %></p>
+                <p style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Welcome, <%= username %> !</p>
             <% } %>
             <% if (message) { %>
                 <p><%= message %></p>

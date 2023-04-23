@@ -1,25 +1,24 @@
-<h1>Edit This Record</h1>
+<h1 style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Edit This Record</h1>
 <form action='/records/<%= records.id %>?_method=PUT' method='POST'>
-    <label for="title">Title:</label>
+    <label for="title" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Title:</label>
     <input type="text" name="title" id="title" value="<%=records.title%>"/>
 
-    <label for="artist">Artist:</label>
+    <label for="artist" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Artist:</label>
     <input type="text" name="artist" id="artist" value="<%=records.artist%>"/>
 
-    <label for="genre">Genre:</label>
+    <label for="genre" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Genre:</label>
     <input type="text" name="genre" id="genre" value="<%=records.genre%>" />
 
-    <label for="numberOfSongs">Number of Songs:</label>
+    <label for="numberOfSongs" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Number of Songs:</label>
     <input type="text" name="numberOfSongs" value="<%=records.numberOfSongs%>"/>
     
-    <label for="img">Image:</label>
+    <label for="img" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Image:</label>
     <input type="text" name="img" value="<%=records.img%>"/>
 
-    <label for="readyToListen">Ready To Listen</label>
+    <label for="readyToListen" style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Ready To Listen</label>
     <input type="checkbox" name="Ready To Listen" id="readyToListen" 
     <% if (records.readyToListen === true) { %>
     <% } %> />
 
-    <input class="btn btn-warning" type="submit" value="Edit the Record">
-
+    <input class="btn btn-dark" type="submit" value="⚠️ Edit the Record ✓">
 </form>

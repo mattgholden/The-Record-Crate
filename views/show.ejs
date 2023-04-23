@@ -1,8 +1,11 @@
-<img src="/public/img/<%= records.image %>" class="img-fluid" alt="Image of <%= records.title %>">
-<p>You have chosen your <%= records.title %> record by <%= records.artist %>.</p>
-    <p>Genre: <%= records.genre %>. </p>
+<img src="https://i.imgur.com/1ryE4YCb.png" class="img-fluid" alt="Image of <%= records.title %>">
+<p style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">You have chosen your <%= records.title %> record by <%= records.artist %>.</p>
+    <p style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Genre: <%= records.genre %>. </p>
     <% if (records.readyToListen) { %>
-    <p> It looks like you are ready to listen to <%= records.title %>!</p>
+    <p style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;"> It looks like you are ready to listen to <%= records.title %>!</p>
     <% } else { %>
-        <p>This record is not ready to be listened to.</p>
+        <p style="color:whitesmoke; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">This record is not ready to be listened to.</p>
     <% } %>
+
+    <!-- needs attention -->
+    <!-- /public/img/<%= records.image %> -->
