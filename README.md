@@ -64,6 +64,10 @@ Database:
 
 
 ### Resources
+https://docs.npmjs.com/
+https://getbootstrap.com/
+https://www.w3schools.com/
+https://thehometheaterdiy.com/how-to-connect-a-turntable-to-a-soundbar/
 
 
 
