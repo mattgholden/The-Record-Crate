@@ -60,7 +60,7 @@ Database:
 ### Wireframes
 ![Screen Shot 2021-12-21 at 11 51 39 PM](https://media.git.generalassemb.ly/user/38857/files/b285e000-6359-11ec-9413-187eb6cc1467)
 
-![image](https://wireframe.cc/V4hRP3)
+![Imgur](https://i.imgur.com/CvrYy4R.png)
 
 
 ### Resources
