@@ -1,3 +1,4 @@
+// Setup the webserver with Node.JS Express
 require('dotenv').config()
 //DEPENDENCIES
 const express = require('express')
@@ -64,6 +65,6 @@ app.get('/getSessionInfo', (req, res) => {
     res.send(req.session.data)
 })
 
-//LISTEN
+//LISTEN providing the port to view where the app can be viewed while in predeployment
 app.listen(app.get('port'), () => console.log(`The record spins!  On port: ${app.get('port')}`))
 

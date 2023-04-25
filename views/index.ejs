@@ -1,5 +1,7 @@
 <div class= container>
     <div class="row col-md-3 col-lg-10 g-4 pt-5" id='records'>
+        <!-- Use of embedded JS to show the records on the first page -->
+        <!-- loop through the array of records for each object -->
          <% records.forEach((records, index) => { %>
             <div class="card" style="width: 40rem;">
                 <img src= "<%=records.img%>" class="card-img-top" alt="<%=records.title%>">

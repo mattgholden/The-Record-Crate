@@ -10,6 +10,7 @@
     </head>
     <!-- https://i.imgur.com/RNZzAkZ.jpg -->
     <div class="background" style="background-image:url('https://i.imgur.com/zZA7bNA.jpg')" style="filter: blur(5px)">
+        <!-- Navbar creation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="/records" style="color: rgb(255, 191, 0); font-size: large;">The Record Crate</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,6 +24,7 @@
                         <li class="nav-item">
                             <a class="nav-item active" href="/records/new"> + Add a New Record |</a>
                         </li>
+                        <!-- if user is not logged in provide the Sign Up option and Log In.  Otherwise allow the Log Out. -->
                     <% if(!loggedIn) { %>
                         <li class="nav-item">
                             <a class="nav-item active" href="/sessions/signup"> ✎ Sign Up </a>
