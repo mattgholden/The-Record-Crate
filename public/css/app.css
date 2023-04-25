@@ -11,6 +11,11 @@
     text-align: center
 }
 
+.message {
+    color: red;
+    font-size: 16px;
+  }
+
 .main{
     text-decoration: none
 }
